@@ -46,8 +46,9 @@
 ---
 
 ## 4. 인프라 아키텍처 (Infrastructure Architecture)
+<img width="1024" height="434" alt="image" src="https://github.com/user-attachments/assets/e5d9a5ae-aae8-42a9-bc46-0fc1e77097ff" />
 
-
+---
 
 ## 5. 상세 문서 (Wiki)
 본 프로젝트의 심도 깊은 설계 고민은 Wiki에 기록되어 있습니다.
@@ -90,6 +91,7 @@
 ---
 
 ## 4. 인프라 아키텍처 (Infrastructure Architecture)
+<img width="1024" height="434" alt="image" src="https://github.com/user-attachments/assets/b1bb35f1-beac-4a0b-9f86-c00cd3ba9501" />
 
 
 

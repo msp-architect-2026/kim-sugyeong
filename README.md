@@ -33,24 +33,24 @@
 
 각 기술의 상세한 도입 배경과 아키텍처 결정 이유는 **[👉 Wiki: 기술 선정 근거 및 아키텍처 상세]**에서 확인하실 수 있습니다. (항목 클릭 시 이동)
 
-### 💻 [Application Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#1-frontend)
+### 💻 [Application Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#1-frontend)
 - **Frontend:** React (Next.js), TailwindCSS
 - **Backend:** NestJS (Node.js), Python FastAPI (OCR 및 추천 알고리즘 서버)
 
-### 🤖 [AI & OCR Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#5-paddleocr)
+### 🤖 [AI & OCR Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#5-paddleocr)
 - **OCR Engine:** PaddleOCR
 - **Algorithm:** XGBoost
 
-### 📊 [Data & Storage Layer](https://github.com/rkskekfk0714/passguard/wiki/System-Design)
+### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/System-Design)
 - **Database:** PostgreSQL (RDB), Redis (In-Memory Cache)
 - **Storage:** MinIO (S3 대체), Longhorn (분산 Block Storage)
 
-### 🚀 [Infrastructure & DevOps Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#11-kubernetes)
+### 🚀 [Infrastructure & DevOps Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#11-kubernetes)
 - **Orchestration:** Kubernetes (kubeadm)
 - **GitOps & CI/CD:** ArgoCD, GitLab CI
 - **Traffic Control:** HPA, MetalLB, Ingress-Nginx (Nginx Proxy Manager 연동)
 
-### 📈 [Test & Monitoring Layer](https://github.com/rkskekfk0714/passguard/wiki/Performance-Test)
+### 📈 [Test & Monitoring Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Performance-Test)
 - **Testing:** k6
 - **Observability:** Prometheus, Grafana, ELK Stack
 
@@ -58,7 +58,7 @@
 
 ## 🖥️ 4. 화면 구성 및 API 설계
 
-서비스의 핵심 비즈니스 로직을 처리하는 화면과 RESTful API 명세입니다. 세부 파라미터 및 설계 의도는 [👉 Wiki: 화면 및 API 설계서](https://github.com/rkskekfk0714/passguard/wiki/Service-Design)에 명세되어 있습니다.
+서비스의 핵심 비즈니스 로직을 처리하는 화면과 RESTful API 명세입니다. 세부 파라미터 및 설계 의도는 [👉 Wiki: 화면 및 API 설계서](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Service-Design)에 명세되어 있습니다.
 
 **[주요 화면 흐름]**
 1. 로그인/회원가입 ➔ 2. 성적표 업로드 ➔ 3. 추천 결과(요약) 페이지 ➔ 4. 결제 페이지 ➔ 5. 결제 후 상세 분석 리포트 및 대학 지원 ➔ 6. 지원자 실시간 랭킹 ➔ 7. 관리자 대시보드
@@ -74,10 +74,13 @@
 
 ## 🏗️ 5. 시스템 아키텍처 및 ERD
 
+(추후 추가 예정)
+<!--
 [Image of On-premise Kubernetes Architecture for OCR Admission System with ArgoCD and HPA]
 
 * **Nginx Proxy Manager (SSL 종료):** 외부 HTTPS 트래픽의 암복호화를 전담하여 클러스터 내부 부하 경감.
 * **Microservices:** Frontend Pod, Backend Pod(비즈니스), OCR Pod(이미지 파싱), ML Recommendation Pod(합격 예측)의 완벽한 역할 분리.
+-->
 
 ---
 
@@ -86,9 +89,9 @@
 본 프로젝트의 심도 깊은 설계 고민과 트러블슈팅, 운영 정책은 Wiki에 상세히 기록되어 있습니다.
 
 * [🏠 Wiki Home: 프로젝트 백서 및 시스템 방향성](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Home)
-* [📐 Architecture & Tech: 아키텍처 및 기술 선정 근거](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack)
-* [🗄️ Database & Logic: 파티셔닝 ERD 및 연도 자동화(Zero-Ops)](https://github.com/rkskekfk0714/passguard/wiki/System-Design)
-* [📱 UI/UX & API Spec: 7단계 화면 구성 및 REST API 명세서](https://github.com/rkskekfk0714/passguard/wiki/Service-Design)
-* [🔥 Performance & HPA: k6 트래픽 엔지니어링 및 320ms 방어 리포트](https://github.com/rkskekfk0714/passguard/wiki/Performance-Test)
-* [🔄 GitOps Pipeline: 무중단 배포 및 자동화 파이프라인 구조](https://github.com/rkskekfk0714/passguard/wiki/GitOps-Pipeline)
-* [🛡️ Security & DR: K8s 보안 정책 및 스토리지 장애 자가 복구 시나리오](https://github.com/rkskekfk0714/passguard/wiki/Security-DR)
+* [📐 Architecture & Tech: 아키텍처 및 기술 선정 근거](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack)
+* [🗄️ Database & Logic: 파티셔닝 ERD 및 연도 자동화(Zero-Ops)](https://github.com/msp-architect-2026/kim-sugyeong/wiki/System-Design)
+* [📱 UI/UX & API Spec: 7단계 화면 구성 및 REST API 명세서](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Service-Design)
+* [🔥 Performance & HPA: k6 트래픽 엔지니어링 및 320ms 방어 리포트](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Performance-Test)
+* [🔄 GitOps Pipeline: 무중단 배포 및 자동화 파이프라인 구조](https://github.com/msp-architect-2026/kim-sugyeong/wiki/GitOps-Pipeline)
+* [🛡️ Security & DR: K8s 보안 정책 및 스토리지 장애 자가 복구 시나리오](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Security-DR)

@@ -30,24 +30,24 @@
 
 각 기술 스택의 상세한 도입 배경과 엔지니어링 의사결정 과정(Why)은 [Wiki: 기술 선정 근거 및 아키텍처 상세](https://github.com/사용자계정/passguard/wiki/Tech-Stack)에서 확인하실 수 있습니다. (항목 클릭 시 이동)
 
-### 💻 [Application Layer](https://github.com/사용자계정/passguard/wiki/Tech-Stack#1-application-layer)
+### 💻 [Application Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#1-application-layer)
 - **Frontend:** React (Next.js), TailwindCSS (SSR 기반 빠른 초기 렌더링 및 실시간 UI)
 - **Backend:** NestJS (Node.js 메인 서버), Python FastAPI (비동기 처리 특화 워커)
 
-### 🤖 [AI & OCR Layer](https://github.com/사용자계정/passguard/wiki/Tech-Stack#2-ai--ocr-layer)
+### 🤖 [AI & OCR Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#2-ai--ocr-layer)
 - **OCR Engine:** PaddleOCR (한국어 인식률 및 온프레미스 자원 효율 최적화)
 - **Algorithm:** XGBoost (입결 데이터 기반 합격 확률 예측)
 
-### 📊 [Data & Storage Layer](https://github.com/사용자계정/passguard/wiki/Tech-Stack#3-data--storage-layer)
+### 📊 [Data & Storage Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#3-data--storage-layer)
 - **Database:** PostgreSQL (연도별 파티셔닝 RDB), Redis (실시간 랭킹 서빙용 인메모리 캐시)
 - **Storage:** MinIO (S3 호환 Object Storage), Longhorn (고가용성 분산 Block Storage)
 
-### 🚀 [Infrastructure & DevOps Layer](https://github.com/사용자계정/passguard/wiki/Tech-Stack#4-infrastructure--devops-layer)
+### 🚀 [Infrastructure & DevOps Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#4-infrastructure--devops-layer)
 - **Orchestration:** Kubernetes (kubeadm v1.28+)
 - **GitOps:** ArgoCD, GitLab CI
 - **Traffic Control:** HPA, MetalLB, Ingress-Nginx
 
-### 📈 [Test & Monitoring Layer](https://github.com/사용자계정/passguard/wiki/Tech-Stack#5-test--monitoring-layer)
+### 📈 [Test & Monitoring Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#5-test--monitoring-layer)
 - **Testing:** k6 (부하 및 스트레스 테스트)
 - **Observability:** Prometheus, Grafana, ELK Stack (중앙 집중형 로그 수집)
 

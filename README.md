@@ -41,7 +41,7 @@
 - **OCR Engine:** PaddleOCR
 - **Algorithm:** XGBoost
 
-### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/System-Design)
+### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#Data & Storage Layer)
 - **Database:** PostgreSQL (RDB), Redis (In-Memory Cache)
 - **Storage:** MinIO (S3 대체), Longhorn (분산 Block Storage)
 

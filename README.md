@@ -1,9 +1,52 @@
 # 🎓 PassGuard: 온프레미스 기반 수능 OCR 성적 분석 및 합격 예측 플랫폼
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
-![Kubernetes](https://img.shields.io/badge/Kubernetes-On--Premise-326CE5?logo=kubernetes)
-![ArgoCD](https://img.shields.io/badge/GitOps-ArgoCD-EF7B4D?logo=argo)
-![k6](https://img.shields.io/badge/k6-Load_Tested-7D64FF?logo=k6)
+<div align="center">
+
+![Version](https://img.shields.io/badge/version-1.0.0-000000.svg?style=for-the-badge)
+![AWS Free](https://img.shields.io/badge/AWS_Free-100%25_Bare--Metal-FF9900?style=for-the-badge&logo=linux&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-Event--Driven_MSA-8A2BE2?style=for-the-badge)
+![Zero Ops](https://img.shields.io/badge/Zero_Ops-Automated_Partitioning-success?style=for-the-badge)
+
+<br>
+
+![Kubernetes](https://img.shields.io/badge/kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
+![ArgoCD](https://img.shields.io/badge/argocd-EF7B4D?style=for-the-badge&logo=argo&logoColor=white)
+![GitLab CI](https://img.shields.io/badge/gitlab_ci-FC6D26?style=for-the-badge&logo=gitlab&logoColor=white)
+![MetalLB](https://img.shields.io/badge/MetalLB-BGP_Routing-02569B?style=for-the-badge)
+![NGINX Ingress](https://img.shields.io/badge/nginx_ingress-009639?style=for-the-badge&logo=nginx&logoColor=white)
+
+<br>
+
+![NestJS](https://img.shields.io/badge/nestjs-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![FastAPI](https://img.shields.io/badge/fastapi-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![RabbitMQ](https://img.shields.io/badge/rabbitmq-FF6600?style=for-the-badge&logo=rabbitmq&logoColor=white)
+![Python](https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-Prediction_ML-12B5CB?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![PaddleOCR](https://img.shields.io/badge/PaddleOCR-Vision_AI-FF4500?style=for-the-badge)
+
+<br>
+
+![PostgreSQL](https://img.shields.io/badge/postgresql-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/redis(Rate_Limiter)-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![MinIO](https://img.shields.io/badge/minio(Object)-C7202C?style=for-the-badge&logo=minio&logoColor=white)
+![Longhorn](https://img.shields.io/badge/Longhorn(Block_HA)-00A2D8?style=for-the-badge)
+
+<br>
+
+![Prometheus](https://img.shields.io/badge/prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)
+![Grafana](https://img.shields.io/badge/grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white)
+![k6](https://img.shields.io/badge/k6_Load_Test-7D64FF?style=for-the-badge&logo=k6&logoColor=white)
+![ElasticSearch](https://img.shields.io/badge/elasticsearch-005571?style=for-the-badge&logo=elasticsearch&logoColor=white)
+
+<br>
+
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+
+</div>
+<!--
+> **"수험생에게는 정보 비대칭을 허무는 정밀한 입시 예측을, 비즈니스적으로는 AI 파싱-데이터 분석-결제 트랜잭션이 선순환하는 통합 플랫폼 생태계를, 엔지니어링적으로는 퍼블릭 클라우드의 안락함을 버리고 극한의 부하를 견뎌낸 100% 온프레미스(Bare-Metal) 고가용성(HA) 아키텍처를 증명합니다."**
+-->
 
 > **"수험생에게는 데이터 기반의 정확한 입시 예측을, 엔지니어링적으로는 클라우드 종속성을 탈피한 100% 온프레미스 고가용성(HA) 아키텍처를 증명하는 프로젝트입니다."**
 

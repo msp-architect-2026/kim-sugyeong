@@ -28,26 +28,26 @@
 
 ## 🛠️ 3. 기술 스택 (Tech Stack)
 
-각 기술 스택의 상세한 도입 배경과 엔지니어링 의사결정 과정(Why)은 [Wiki: 기술 선정 근거 및 아키텍처 상세](https://github.com/사용자계정/passguard/wiki/Tech-Stack)에서 확인하실 수 있습니다. (항목 클릭 시 이동)
+각 기술 스택의 상세한 도입 배경과 엔지니어링 의사결정 과정(Why)은 **[👉 Wiki: 기술 선정 근거 및 아키텍처 상세](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack)**에서 확인하실 수 있습니다. (항목 클릭 시 이동)
 
-### 💻 [Application Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#1-application-layer)
+### 💻 [Application Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#2--애플리케이션-계층-분리-msa-설계)
 - **Frontend:** React (Next.js), TailwindCSS (SSR 기반 빠른 초기 렌더링 및 실시간 UI)
 - **Backend:** NestJS (Node.js 메인 서버), Python FastAPI (비동기 처리 특화 워커)
 
-### 🤖 [AI & OCR Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#2-ai--ocr-layer)
+### 🤖 [AI & OCR Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#2--애플리케이션-계층-분리-msa-설계)
 - **OCR Engine:** PaddleOCR (한국어 인식률 및 온프레미스 자원 효율 최적화)
 - **Algorithm:** XGBoost (입결 데이터 기반 합격 확률 예측)
 
-### 📊 [Data & Storage Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#3-data--storage-layer)
+### 📊 [Data & Storage Layer](https://github.com/rkskekfk0714/passguard/wiki/System-Design)
 - **Database:** PostgreSQL (연도별 파티셔닝 RDB), Redis (실시간 랭킹 서빙용 인메모리 캐시)
 - **Storage:** MinIO (S3 호환 Object Storage), Longhorn (고가용성 분산 Block Storage)
 
-### 🚀 [Infrastructure & DevOps Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#4-infrastructure--devops-layer)
+### 🚀 [Infrastructure & DevOps Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#1--온프레미스-인프라-자립화-aws-free-k8s)
 - **Orchestration:** Kubernetes (kubeadm v1.28+)
 - **GitOps:** ArgoCD, GitLab CI
 - **Traffic Control:** HPA, MetalLB, Ingress-Nginx
 
-### 📈 [Test & Monitoring Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#5-test--monitoring-layer)
+### 📈 [Test & Monitoring Layer](https://github.com/rkskekfk0714/passguard/wiki/Performance-Test)
 - **Testing:** k6 (부하 및 스트레스 테스트)
 - **Observability:** Prometheus, Grafana, ELK Stack (중앙 집중형 로그 수집)
 
@@ -65,7 +65,9 @@
 
 본 프로젝트의 심도 깊은 설계 고민, 트러블슈팅, 그리고 운영 정책은 Wiki에 상세히 기록되어 있습니다.
 
-* [🏠 Wiki Home: 프로젝트 백서 및 시스템 방향성 바로가기](./wiki/Home)
-* [📐 Architecture & Tech: 아키텍처 변천사 및 기술 선정 근거](./wiki/Tech-Stack)
-* [🗄️ Database & Logic: 파티셔닝 DB 설계 및 연도 자동화(Zero-Ops) 알고리즘](./wiki/System-Design)
-* [🔥 Performance & HPA: k6 트래픽 엔지니어링 및 부하 테스트 리포트](./wiki/Performance-Test)
+* [🏠 Wiki Home: 프로젝트 백서 및 시스템 방향성 바로가기](https://github.com/rkskekfk0714/passguard/wiki/Home)
+* [📐 Architecture & Tech: 아키텍처 변천사 및 기술 선정 근거](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack)
+* [🗄️ Database & Logic: 파티셔닝 DB 설계 및 연도 자동화(Zero-Ops) 알고리즘](https://github.com/rkskekfk0714/passguard/wiki/System-Design)
+* [🔥 Performance & HPA: k6 트래픽 엔지니어링 및 부하 테스트 리포트](https://github.com/rkskekfk0714/passguard/wiki/Performance-Test)
+* [🔄 GitOps Pipeline: 무중단 배포 및 자동화 파이프라인 구조](https://github.com/rkskekfk0714/passguard/wiki/GitOps-Pipeline)
+* [🛡️ Security & DR: K8s 보안 정책 및 스토리지 장애 자가 복구 시나리오](https://github.com/rkskekfk0714/passguard/wiki/Security-DR)

@@ -65,7 +65,8 @@
 
 본 프로젝트의 심도 깊은 설계 고민, 트러블슈팅, 그리고 운영 정책은 Wiki에 상세히 기록되어 있습니다.
 
-* [🏠 Wiki Home: 프로젝트 백서 및 시스템 방향성 바로가기](https://github.com/rkskekfk0714/passguard/wiki/Home)
+* [🏠 Wiki Home: 프로젝트 백서 및 시스템 방향성 바로가기](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Home)
+
 * [📐 Architecture & Tech: 아키텍처 변천사 및 기술 선정 근거](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack)
 * [🗄️ Database & Logic: 파티셔닝 DB 설계 및 연도 자동화(Zero-Ops) 알고리즘](https://github.com/rkskekfk0714/passguard/wiki/System-Design)
 * [🔥 Performance & HPA: k6 트래픽 엔지니어링 및 부하 테스트 리포트](https://github.com/rkskekfk0714/passguard/wiki/Performance-Test)

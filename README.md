@@ -28,28 +28,28 @@
 
 ## 🛠️ 3. 기술 스택 (Tech Stack)
 
-각 기술 스택의 상세한 도입 배경과 엔지니어링 의사결정 과정(Why)은 **[👉 Wiki: 기술 선정 근거 및 아키텍처 상세](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack)**에서 확인하실 수 있습니다. (항목 클릭 시 이동)
+각 기술의 상세한 도입 배경과 아키텍처 결정 이유는 해당 기술명을 클릭하여 **[Wiki: 기술 선정 근거]**에서 확인하실 수 있습니다.
 
-### 💻 [Application Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#2--애플리케이션-계층-분리-msa-설계)
-- **Frontend:** React (Next.js), TailwindCSS (SSR 기반 빠른 초기 렌더링 및 실시간 UI)
-- **Backend:** NestJS (Node.js 메인 서버), Python FastAPI (비동기 처리 특화 워커)
+### 💻 Application Layer
+- **Frontend:** [React (Next.js)](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#1-frontend), [TailwindCSS](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#2-tailwindcss)
+- **Backend:** [NestJS](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#3-nestjs), [Python FastAPI](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#4-fastapi)
 
-### 🤖 [AI & OCR Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#2--애플리케이션-계층-분리-msa-설계)
-- **OCR Engine:** PaddleOCR (한국어 인식률 및 온프레미스 자원 효율 최적화)
-- **Algorithm:** XGBoost (입결 데이터 기반 합격 확률 예측)
+### 🤖 AI & OCR Layer
+- **OCR Engine:** [PaddleOCR](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#5-paddleocr)
+- **Algorithm:** [XGBoost](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#6-xgboost)
 
-### 📊 [Data & Storage Layer](https://github.com/rkskekfk0714/passguard/wiki/System-Design)
-- **Database:** PostgreSQL (연도별 파티셔닝 RDB), Redis (실시간 랭킹 서빙용 인메모리 캐시)
-- **Storage:** MinIO (S3 호환 Object Storage), Longhorn (고가용성 분산 Block Storage)
+### 📊 Data & Storage Layer
+- **Database:** [PostgreSQL](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#7-postgresql), [Redis](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#8-redis)
+- **Storage:** [MinIO](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#9-minio), [Longhorn](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#10-longhorn)
 
-### 🚀 [Infrastructure & DevOps Layer](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#1--온프레미스-인프라-자립화-aws-free-k8s)
-- **Orchestration:** Kubernetes (kubeadm v1.28+)
-- **GitOps:** ArgoCD, GitLab CI
-- **Traffic Control:** HPA, MetalLB, Ingress-Nginx
+### 🚀 Infrastructure & DevOps Layer
+- **Orchestration:** [Kubernetes](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#11-kubernetes)
+- **GitOps:** [ArgoCD & GitLab CI](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#12-argocd--gitlab-ci)
+- **Traffic Control:** [HPA](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#13-hpa), [MetalLB](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#14-metallb), [Ingress-Nginx](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#15-ingress-nginx)
 
-### 📈 [Test & Monitoring Layer](https://github.com/rkskekfk0714/passguard/wiki/Performance-Test)
-- **Testing:** k6 (부하 및 스트레스 테스트)
-- **Observability:** Prometheus, Grafana, ELK Stack (중앙 집중형 로그 수집)
+### 📈 Test & Monitoring Layer
+- **Testing:** [k6](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#16-k6)
+- **Observability:** [Prometheus & Grafana](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#17-prometheus--grafana), [ELK Stack](https://github.com/rkskekfk0714/passguard/wiki/Tech-Stack#18-elk-stack)
 
 ---
 

@@ -41,7 +41,7 @@
 - **OCR Engine:** PaddleOCR
 - **Algorithm:** XGBoost
 
-### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#Data & Storage Layer)
+### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#7-PostgreSQL)
 - **Database:** PostgreSQL (RDB), Redis (In-Memory Cache)
 - **Storage:** MinIO (S3 대체), Longhorn (분산 Block Storage)
 
@@ -50,7 +50,7 @@
 - **GitOps & CI/CD:** ArgoCD, GitLab CI
 - **Traffic Control:** HPA, MetalLB, Ingress-Nginx (Nginx Proxy Manager 연동)
 
-### 📈 [Test & Monitoring Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Performance-Test)
+### 📈 [Test & Monitoring Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#16-k6)
 - **Testing:** k6
 - **Observability:** Prometheus, Grafana, ELK Stack
 

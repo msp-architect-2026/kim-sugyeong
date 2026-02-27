@@ -37,7 +37,7 @@
 - **Frontend:** React (Next.js), TailwindCSS
 - **Backend:** NestJS (Node.js), Python FastAPI (OCR 및 추천 알고리즘 서버)
 
-### 🤖 [AI & OCR Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#5-paddleocr)
+### 🤖 [AI & OCR Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#💻-Application-Layer)
 - **OCR Engine:** PaddleOCR
 - **Algorithm:** XGBoost
 

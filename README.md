@@ -33,24 +33,24 @@
 
 각 기술의 상세한 도입 배경과 아키텍처 결정 이유는 **[👉 Wiki: 기술 선정 근거 및 아키텍처 상세]**에서 확인하실 수 있습니다. (항목 클릭 시 이동)
 
-### 💻 [Application Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#1-frontend)
+### 💻 [Application Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-application-layer)
 - **Frontend:** React (Next.js), TailwindCSS
 - **Backend:** NestJS (Node.js), Python FastAPI (OCR 및 추천 알고리즘 서버)
 
-### 🤖 [AI & OCR Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#💻-Application-Layer)
+### 🤖 [AI & OCR Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-ai-&-ocr-layer)
 - **OCR Engine:** PaddleOCR
 - **Algorithm:** XGBoost
 
-### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#7-PostgreSQL)
+### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-data-&-storage-layer)
 - **Database:** PostgreSQL (RDB), Redis (In-Memory Cache)
 - **Storage:** MinIO (S3 대체), Longhorn (분산 Block Storage)
 
-### 🚀 [Infrastructure & DevOps Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#11-kubernetes)
+### 🚀 [Infrastructure & DevOps Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-infrastructure-&-devops-layer)
 - **Orchestration:** Kubernetes (kubeadm)
 - **GitOps & CI/CD:** ArgoCD, GitLab CI
 - **Traffic Control:** HPA, MetalLB, Ingress-Nginx (Nginx Proxy Manager 연동)
 
-### 📈 [Test & Monitoring Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#16-k6)
+### 📈 [Test & Monitoring Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-test-&-monitoring-layer)
 - **Testing:** k6
 - **Observability:** Prometheus, Grafana, ELK Stack
 

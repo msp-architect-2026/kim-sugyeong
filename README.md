@@ -37,20 +37,20 @@
 - **Frontend:** React (Next.js), TailwindCSS
 - **Backend:** NestJS (Node.js), Python FastAPI (OCR 및 추천 알고리즘 서버)
 
-### 🤖 [AI & OCR Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-ai-&-ocr-layer)
+### 🤖 [AI & OCR Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-ai--ocr-layer)
 - **OCR Engine:** PaddleOCR
 - **Algorithm:** XGBoost
 
-### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-data-&-storage-layer)
+### 📊 [Data & Storage Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-data--storage-layer)
 - **Database:** PostgreSQL (RDB), Redis (In-Memory Cache)
 - **Storage:** MinIO (S3 대체), Longhorn (분산 Block Storage)
 
-### 🚀 [Infrastructure & DevOps Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-infrastructure-&-devops-layer)
+### 🚀 [Infrastructure & DevOps Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-infrastructure--devops-layer)
 - **Orchestration:** Kubernetes (kubeadm)
 - **GitOps & CI/CD:** ArgoCD, GitLab CI
 - **Traffic Control:** HPA, MetalLB, Ingress-Nginx (Nginx Proxy Manager 연동)
 
-### 📈 [Test & Monitoring Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-test-&-monitoring-layer)
+### 📈 [Test & Monitoring Layer](https://github.com/msp-architect-2026/kim-sugyeong/wiki/Tech-Stack#-test--monitoring-layer)
 - **Testing:** k6
 - **Observability:** Prometheus, Grafana, ELK Stack
 

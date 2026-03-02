@@ -88,6 +88,8 @@
 | 🗃 ERD | 데이터베이스 테이블 구조 | [Wiki → ERD](../../wiki/ERD) |
 | 🏗 인프라 아키텍처 | On-Premise K8s 전체 구성도 | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
 | 🧩 앱 아키텍처 | 서비스 간 통신 및 계층 구조 | [Wiki → Application Architecture](../../wiki/Application-Architecture) |
+| 🚀 CI/CD 파이프라인 | GitLab Runner를 활용한 이미지 빌드 및 ArgoCD 배포 전략 | [CI/CD Pipeline](Deployment-Pipeline) |
+| 📊 모니터링 & 테스트 | Prometheus + Grafana 대시보드 및 k6 시나리오 가이드 | [Monitoring & Testing](Monitoring-and-Load-Test) |
 
 
 ---

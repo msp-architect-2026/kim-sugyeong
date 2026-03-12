@@ -34,7 +34,7 @@
 | 📊 **구현 완료 보고서** | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) |
 | 🏗 **인프라 아키텍처** | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
 | 📡 **API 명세** | [Wiki → API 명세](../../wiki/API-명세) |
-| 🐛 **트러블슈팅 기록** | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) |
+<!-- | 🐛 **트러블슈팅 기록** | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) | -->
 
 ---
 
@@ -152,7 +152,7 @@
 | 🏗 인프라 아키텍처 | On-Premise K8s 전체 구성도 | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
 | 🧩 앱 아키텍처 | 서비스 간 통신 · 계층 구조 | [Wiki → Application Architecture](../../wiki/Application-Architecture) |
 | 🚀 CI/CD 파이프라인 | GitLab Runner + ArgoCD 배포 전략 | [Wiki → CI/CD](../../wiki/CI-CD-파이프라인) |
-| 🐛 트러블슈팅 기록 | 실제 장애 · 원인 분석 · 해결 과정 | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) |
+<!-- | 🐛 트러블슈팅 기록 | 실제 장애 · 원인 분석 · 해결 과정 | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) | -->
 
 ---
 

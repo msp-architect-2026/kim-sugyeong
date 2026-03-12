@@ -3,10 +3,10 @@
 # 🎓 수능 AI 대학 입시 예측 플랫폼 — snscore
 
 **수능 성적표 이미지를 OCR로 분석하여 합격 가능 대학·학과를 자동 예측하는 AI 기반 입시 플랫폼**
-
+<!--
 <br/>
 
-<!-- ![Status](https://img.shields.io/badge/🚀_1차_데모_시연_완료-지속_고도화_진행_중-success?style=for-the-badge) -->
+ ![Status](https://img.shields.io/badge/🚀_1차_데모_시연_완료-지속_고도화_진행_중-success?style=for-the-badge) -->
 
 <br/>
 

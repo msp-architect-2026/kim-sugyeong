@@ -31,10 +31,10 @@
 |------|------|
 | 📋 **Wiki (설계 문서 전체)** | [Wiki Home](../../wiki) |
 | 🗂 **칸반 보드 (이슈/진행 현황)** | [Project Board](../../issues) |
-<!--| 📊 **구현 완료 보고서** | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) | -->
 | 🏗 **인프라 아키텍처** | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
 | 📡 **API 명세** | [Wiki → API 명세](../../wiki/API-명세) |
 | 🐛 **트러블슈팅 기록** | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) |
+<!--| 📊 **구현 완료 보고서** | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) |--> 
 
 ---
 

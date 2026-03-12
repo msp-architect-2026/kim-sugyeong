@@ -6,7 +6,7 @@
 
 <br/>
 
-![Status](https://img.shields.io/badge/🚀_1차_데모_시연_완료-지속_고도화_진행_중-success?style=for-the-badge)
+<!-- ![Status](https://img.shields.io/badge/🚀_1차_데모_시연_완료-지속_고도화_진행_중-success?style=for-the-badge) -->
 
 <br/>
 

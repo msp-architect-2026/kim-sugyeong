@@ -1,5 +1,176 @@
 <div align="center">
 
+# 🎓 수능 AI 대학 입시 예측 플랫폼 — snscore
+
+**수능 성적표 이미지를 OCR로 분석하여 합격 가능 대학·학과를 자동 예측하는 AI 기반 입시 플랫폼**
+
+<br/>
+
+![Status](https://img.shields.io/badge/🚀_1차_데모_시연_완료-지속_고도화_진행_중-success?style=for-the-badge)
+
+<br/>
+
+![Platform](https://img.shields.io/badge/platform-Web%20%7C%20PWA-brightgreen)
+![OCR](https://img.shields.io/badge/OCR-PaddleOCR-orange)
+![Infra](https://img.shields.io/badge/Infra-On--Premise%20K8s%203Node-blueviolet)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-GitLabCI%20%7C%20ArgoCD%20GitOps-red)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Load Test](https://img.shields.io/badge/LoadTest-K6%20%7C%20HPA-yellow)
+
+<br/>
+
+> ⚠️ **AWS 서비스 미사용** — 전 구간 On-Premise 구성
+
+</div>
+
+---
+
+## 🔗 프로젝트 핵심 링크
+
+| 항목 | 링크 |
+|------|------|
+| 📋 **Wiki (설계 문서 전체)** | [Wiki Home](../../wiki) |
+| 🗂 **칸반 보드 (이슈/진행 현황)** | [Project Board](../../issues) |
+| 📊 **구현 완료 보고서** | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) |
+| 🏗 **인프라 아키텍처** | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
+| 📡 **API 명세** | [Wiki → API 명세](../../wiki/API-명세) |
+| 🐛 **트러블슈팅 기록** | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) |
+
+---
+
+## 📌 프로젝트 개요
+
+수험생이 **수능 성적표 사진을 업로드**하면, EasyOCR이 과목별 등급을 자동으로 읽어내고
+**전년도 입시 데이터 기반**으로 합격 가능 대학과 학과를 예측해 추천합니다.
+
+| 단계 | 내용 |
+|------|------|
+| 📸 **이미지 업로드** | 카메라 촬영 또는 갤러리 파일 업로드 (React PWA) |
+| 🔍 **OCR 분석** | PaddleOCR로 과목별 등급 자동 추출 |
+| 🔓 **무료 제공** | 등급 확인 + 대학명 미리보기 |
+| 💳 **결제 후 잠금 해제** | TOP 3 대학 추천 · 합격 확률 · 원서 접수 연동 |
+| 📊 **실시간 랭킹** | 가장 많이 지원한 대학 순위 제공 |
+
+---
+
+## 🏗 전체 아키텍처 요약
+
+```
+[모바일/PC 브라우저]
+        │ http://snscore.172.16.10.11.nip.io:30080
+        ▼
+[Nginx Ingress — Master 172.16.10.11:30080]
+        │
+        ├── /api/*  →  FastAPI Pod (EasyOCR 동기 스캔, 추천, 랭킹)
+        └──  /*     →  Frontend Pod (React PWA 정적 파일)
+
+[On-Premise K8s 3-Node Cluster]
+  Master  172.16.10.11  — Control Plane + Nginx Ingress
+  Worker1 172.16.10.12  — App Pods (FastAPI · Spring · Frontend)
+  Worker2 172.16.10.13  — Data Pods (PostgreSQL · Harbor)
+
+[DevOps 서버 172.16.10.10 — K8s 클러스터 외부]
+  GitLab CE · GitLab Runner (Kaniko) · NFS Storage
+
+[GitOps 자동화 흐름]
+  git push develop
+    → GitLab CI: 테스트 → Kaniko 이미지 빌드 → Harbor push
+    → update-manifest: k8s-manifests sed 태그 교체
+    → ArgoCD Auto-Sync: snscore-staging 자동 배포
+```
+
+---
+
+## 🛠 기술 스택
+
+### Frontend
+| 기술 | 설명 |
+|------|------|
+| React 18 + Vite | SPA, PWA (홈화면 추가, 카메라 직접 접근) |
+| TypeScript | 타입 안전성 |
+| react-router-dom | 바텀 탭 네비게이션 + SPA 라우팅 |
+| Axios + TanStack Query | API 통신 및 서버 상태 관리 |
+
+### Backend
+| 기술 | 역할 및 선택 이유 |
+|------|----------------|
+| **FastAPI** (Python 3.11) | AI/OCR 처리 — PaddleOCR 표 인식 및 구조 분석(Layout)에 특화됨 |
+| **Spring Boot** (Java 17) | 결제·회원 — 트랜잭션 안정성이 중요한 엔터프라이즈 로직 분리 |
+| PostgreSQL 16 | Range Partitioning으로 수능 연도별 데이터 분리 |
+| Redis | 실시간 랭킹 Sorted Set + 세션 캐시 *(Issue #8 예정)* |
+| Kafka (Strimzi) | OCR 비동기 처리 큐 — 트래픽 폭주 완충 *(Issue #9 예정)* |
+
+### OCR & AI
+| 기술 | 설명 |
+|------|------|
+| **PaddleOCR** | 한국어·영어 수능 성적표 텍스트 추출 |
+| **PyTorch 2.2.0+cpu** | GPU 없는 K8s 환경 OOM 방지 — CPU-only 경량화 |
+| 등급 파싱 엔진 | 정규식 기반 과목명·표준점수·백분위·등급 추출 |
+
+### Infra (On-Premise, No AWS)
+| 기술 | 설명 |
+|------|------|
+| **Kubernetes** (kubeadm) | 3노드 클러스터, Calico CNI |
+| **ArgoCD** | GitOps 선언적 배포 (staging: Auto, production: Manual) |
+| **Harbor v2.10.2** | 온프레미스 컨테이너 레지스트리 + Trivy 취약점 스캔 |
+| **GitLab CI + Kaniko** | 특권 컨테이너 없는 K8s 내 이미지 빌드 |
+| **Nginx Ingress** | NodePort 30080/30443, nip.io 기반 모바일 접근 |
+| Prometheus + Grafana | 클러스터 모니터링 *(Issue #25~26 예정)* |
+| MinIO | 성적표 이미지 오브젝트 스토리지 *(Issue #8 예정)* |
+| Cert-Manager | TLS 자동 발급 (snscore-ca-issuer) |
+
+---
+
+## 📋 구현 현황
+
+| 카테고리 | 항목 | 상태 |
+|---------|------|------|
+| **인프라** | K8s 3노드 클러스터 (Calico CNI) | ✅ 완료 |
+| | Nginx Ingress + Cert-Manager | ✅ 완료 |
+| | GitLab CE + Runner (Kaniko) | ✅ 완료 |
+| | Harbor v2.10.2 + Robot Account | ✅ 완료 |
+| | ArgoCD GitOps (staging Auto) | ✅ 완료 |
+| | PostgreSQL 16 (Range Partitioning) | ✅ 완료 |
+| **핵심 기능** | FastAPI OCR 스캔 (`POST /api/ocr/scan`) | ✅ 완료 |
+| | React PWA 카메라/갤러리 업로드 UI | ✅ 완료 |
+| | nip.io Ingress (PC + 모바일 동시 접근) | ✅ 완료 |
+| **향후 예정** | Kafka 비동기 OCR 큐 | 🔲 Issue #9 |
+| | Redis 실시간 랭킹 | 🔲 Issue #8 |
+| | Prometheus + Grafana 모니터링 | 🔲 Issue #25~26 |
+| | 결제 연동 (토스페이먼츠) | 🔲 예정 |
+
+---
+
+## 📋 프로젝트 문서
+
+| 문서 | 설명 | 링크 |
+|------|------|------|
+| 📊 **구현 완료 보고서** | 기술 선택 근거 · 트러블슈팅 3건 · 향후 계획 | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) |
+| 🖥 화면 구성 | UI Flow · 라우팅 구조 | [Wiki → 화면 구성](../../wiki/화면-구성) |
+| 📡 API 명세 | REST API 전체 엔드포인트 | [Wiki → API 명세](../../wiki/API-명세) |
+| 🗃 ERD | DB 테이블 구조 | [Wiki → ERD](../../wiki/ERD) |
+| 🏗 인프라 아키텍처 | On-Premise K8s 전체 구성도 | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
+| 🧩 앱 아키텍처 | 서비스 간 통신 · 계층 구조 | [Wiki → Application Architecture](../../wiki/Application-Architecture) |
+| 🚀 CI/CD 파이프라인 | GitLab Runner + ArgoCD 배포 전략 | [Wiki → CI/CD](../../wiki/CI-CD-파이프라인) |
+| 🐛 트러블슈팅 기록 | 실제 장애 · 원인 분석 · 해결 과정 | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) |
+
+---
+
+<div align="center">
+Made with ❤️ · No AWS · Full On-Premise K8s · 지속 고도화 진행 중
+</div>
+
+
+
+
+
+
+
+
+<!--
+
+<div align="center">
+
 # 🎓 수능 AI 대학 입시 예측 플랫폼
 
 **수능 성적표 이미지를 OCR로 분석하여 합격 가능 대학·학과를 자동 예측하는 AI 기반 입시 플랫폼**
@@ -99,7 +270,7 @@ Made with ❤️ · No AWS · Full On-Premise
 </div>
 
 
-
+-->
 
 
 

@@ -31,10 +31,10 @@
 |------|------|
 | 📋 **Wiki (설계 문서 전체)** | [Wiki Home](../../wiki) |
 | 🗂 **칸반 보드 (이슈/진행 현황)** | [Project Board](../../issues) |
-| 📊 **구현 완료 보고서** | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) |
+<!--| 📊 **구현 완료 보고서** | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) | -->
 | 🏗 **인프라 아키텍처** | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
 | 📡 **API 명세** | [Wiki → API 명세](../../wiki/API-명세) |
-<!-- | 🐛 **트러블슈팅 기록** | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) | -->
+| 🐛 **트러블슈팅 기록** | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) |
 
 ---
 
@@ -145,14 +145,14 @@
 
 | 문서 | 설명 | 링크 |
 |------|------|------|
-| 📊 **구현 완료 보고서** | 기술 선택 근거 · 트러블슈팅 3건 · 향후 계획 | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) |
+<-- | 📊 **구현 완료 보고서** | 기술 선택 근거 · 트러블슈팅 3건 · 향후 계획 | [Implementation_Completion_Report.md](docs/Implementation_Completion_Report.md) | -->
 | 🖥 화면 구성 | UI Flow · 라우팅 구조 | [Wiki → 화면 구성](../../wiki/화면-구성) |
 | 📡 API 명세 | REST API 전체 엔드포인트 | [Wiki → API 명세](../../wiki/API-명세) |
 | 🗃 ERD | DB 테이블 구조 | [Wiki → ERD](../../wiki/ERD) |
 | 🏗 인프라 아키텍처 | On-Premise K8s 전체 구성도 | [Wiki → Infra Architecture](../../wiki/Infra-Architecture) |
 | 🧩 앱 아키텍처 | 서비스 간 통신 · 계층 구조 | [Wiki → Application Architecture](../../wiki/Application-Architecture) |
 | 🚀 CI/CD 파이프라인 | GitLab Runner + ArgoCD 배포 전략 | [Wiki → CI/CD](../../wiki/CI-CD-파이프라인) |
-<!-- | 🐛 트러블슈팅 기록 | 실제 장애 · 원인 분석 · 해결 과정 | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) | -->
+| 🐛 트러블슈팅 기록 | 실제 장애 · 원인 분석 · 해결 과정 | [Wiki → 트러블슈팅](../../wiki/트러블슈팅-기록) |
 
 ---
 
